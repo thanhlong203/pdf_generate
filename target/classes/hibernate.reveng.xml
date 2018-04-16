@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="SKILL_MNG" match-name="access_items"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="company"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="controllers"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="employee_achievement"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="employee_bank"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="employee_experience_detail"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="employee_profile"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="employee_project"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="employee_skill"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="evaluation_file"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="experience_detail"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="experience_group"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="fields"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="groups"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="mail_history"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="qac_answer"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="qac_comment"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="qac_question_template"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="skill_detail"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="skill_group"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="skill_level"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="skill_unit"/>
+  <table-filter match-catalog="SKILL_MNG" match-name="skill_update_status"/>
+</hibernate-reverse-engineering>

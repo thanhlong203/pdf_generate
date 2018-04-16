@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="vn.yume.cv.orm.po.UserPo">
+  <!-- auto-generated mappings -->
+  <sql id="columns">id, username, password, group_id, created, modified</sql>
+
+  <select id="get" parameterType="long" resultType="UserPo">
+    select * from users where id=#{id}
+  </select>
+
+</mapper>
