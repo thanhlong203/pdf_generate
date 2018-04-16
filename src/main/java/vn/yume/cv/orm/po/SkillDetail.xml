@@ -9,10 +9,6 @@
     select * from skill_detail where ID=#{id}
   </select>
   
-  <select id="getAll"  resultType="SkillDetail">
-    select * from skill_detail;
-  </select>
-  
 	<resultMap type='SkillDetail' id='SkillDetailResult'>
 	    <id property='id' column='ID'/>
 	    <result property='skillGroupId' column='SKILL_GROUP_ID'/>

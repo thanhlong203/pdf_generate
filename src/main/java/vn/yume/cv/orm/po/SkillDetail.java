@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
 public class SkillDetail implements java.io.Serializable {
 
 	private Integer id;
-	private String skillGroupId;
+	private int skillGroupId;
 	private String skillName;
 	private Integer parentId;
 	private Boolean type;
@@ -37,12 +37,12 @@ public class SkillDetail implements java.io.Serializable {
 	public SkillDetail() {
 	}
 
-	public SkillDetail(String skillGroupId, Date insertDatetime) {
+	public SkillDetail(int skillGroupId, Date insertDatetime) {
 		this.skillGroupId = skillGroupId;
 		this.insertDatetime = insertDatetime;
 	}
 
-	public SkillDetail(String skillGroupId, String skillName, Integer parentId, Boolean type, Long evaluationType,
+	public SkillDetail(int skillGroupId, String skillName, Integer parentId, Boolean type, Long evaluationType,
 			Long unitId, Integer skillLevel, Integer rootSkill, Integer lft, Integer rgt, Short displayOrder,
 			Boolean activeFlg, Date insertDatetime, Date updateDatetime) {
 		this.skillGroupId = skillGroupId;
@@ -74,11 +74,11 @@ public class SkillDetail implements java.io.Serializable {
 	}
 
 	@Column(name = "SKILL_GROUP_ID", nullable = false, length = 10)
-	public String getSkillGroupId() {
+	public int getSkillGroupId() {
 		return this.skillGroupId;
 	}
 
-	public void setSkillGroupId(String skillGroupId) {
+	public void setSkillGroupId(int skillGroupId) {
 		this.skillGroupId = skillGroupId;
 	}
 

@@ -3,6 +3,7 @@ package vn.yume.cv.orm.dao.impl;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
@@ -21,6 +22,10 @@ public class MyBatisDao<T> extends SqlSessionDaoSupport implements Dao<T> {
 	
 	public T get(Serializable id) {
 		return getSqlSession().selectOne(getStatement("get"), id);
+	}
+	
+	public List<T> getAll(){
+		return getSqlSession().selectList(getStatement("getAll"));
 	}
 	
 	protected String getStatement(String query) {
