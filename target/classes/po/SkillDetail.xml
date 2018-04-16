@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="vn.yume.cv.orm.po.SkillDetail">
+  <!-- auto-generated mappings -->
+  <sql id="columns">ID, SKILL_GROUP_ID, SKILL_NAME, PARENT_ID, TYPE, EVALUATION_TYPE, UNIT_ID, SKILL_LEVEL, ROOT_SKILL, LFT, RGT, DISPLAY_ORDER, ACTIVE_FLG, INSERT_DATETIME, UPDATE_DATETIME</sql>
+
+  <select id="get" parameterType="long" resultMap="SkillDetailResult">
+    select * from skill_detail where ID=#{id}
+  </select>
+  
+	<resultMap type='SkillDetail' id='SkillDetailResult'>
+	    <id property='id' column='ID'/>
+	    <result property='skillGroupId' column='SKILL_GROUP_ID'/>
+	    <result property='skillName' column='SKILL_NAME'/>
+	    <result property='parentId' column='PARENT_ID'/>
+	    <result property='type' column='TYPE'/>  
+	    <result property='evaluationType' column='EVALUATION_TYPE'/>  
+	    <result property='unitId' column='UNIT_ID'/>  
+	    <result property='skillLevel' column='SKILL_LEVEL'/>  
+	    <result property='rootSkill' column='ROOT_SKILL'/>  
+	    <result property='lft' column='LFT'/>  
+	    <result property='rgt' column='RGT'/>  
+	    <result property='displayOrder' column='DISPLAY_ORDER'/>  
+	    <result property='activeFlg' column='ACTIVE_FLG'/>  
+	    <result property='insertDatetime' column='INSERT_DATETIME'/>  
+	    <result property='updateDatetime' column='UPDATE_DATETIME'/>  
+  </resultMap>
+
+</mapper>

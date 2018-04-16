@@ -3,10 +3,28 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="userDao" class="vn.yume.cv.orm.dao.impl.UserDaoImpl"></bean>
-	
-	<bean id="userService" class="vn.yume.cv.orm.service.UserServiceImpl">
-		<property name="userDao" ref="userDao" />
+	<bean id="skilldetaildao" class="vn.yume.cv.orm.dao.impl.SkillDetailDaoImpl">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
-
+	
+	<bean id="skilldetailservice" class="vn.yume.cv.orm.service.impl.SkillDetailServiceImpl">
+		<property name="skillDetailDao" ref="skilldetaildao" />
+	</bean>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	  <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	  <property name="url" value="jdbc:mysql://10.1.40.32:3306/SKILL_MNG?autoReconnect=true"/>
+	  <property name="username" value="app"/>
+	  <property name="password" value="localdev123"/>
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	  <property name="dataSource" ref="dataSource" />
+	  <property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	  <property name="dataSource" ref="dataSource" />
+	</bean>
+	
 </beans>

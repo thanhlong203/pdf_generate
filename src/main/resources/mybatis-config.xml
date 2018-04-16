@@ -6,6 +6,7 @@
 <properties resource='dev.properties'/>
 <typeAliases>
   <typeAlias type='vn.yume.cv.orm.po.UserPo' alias='UserPo'></typeAlias>
+  <typeAlias type='vn.yume.cv.orm.po.SkillDetail' alias='SkillDetail'></typeAlias>
 </typeAliases>
 <environments default='development'>
   <environment id='development'>
@@ -20,5 +21,6 @@
 </environments>
 <mappers>
 	 <mapper resource='po/UserPo.xml'/>
+	 <mapper resource='po/SkillDetail.xml'/>
 </mappers>
 </configuration>
